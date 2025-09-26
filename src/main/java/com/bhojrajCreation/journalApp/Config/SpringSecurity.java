@@ -39,7 +39,7 @@ public class SpringSecurity {
                         .permitAll()
                 )
                 .addFilterBefore(jwtFilter, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.class) // ✅ UNCOMMENTED
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/api/**", "/user/login", "/user/signup", "/user/home,/user/journal/delete"))
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/api/**","/user/**", "/user/login", "/user/signup", "/user/home,/user/journal/delete"))
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 );

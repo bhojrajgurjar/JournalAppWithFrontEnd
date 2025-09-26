@@ -1,9 +1,17 @@
 spring:
   data:
     mongodb:
+<<<<<<< HEAD
       uri : ${mongoUri}
+=======
+      uri : mongodb+srv://bhojrajmca24:fuS94579dLQBXZ7b@cluster0.isdtu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+>>>>>>> 0ecd5a8 (Initial clean commit)
       database : journalDb
       auto-index-creation: true
 
 server:
+<<<<<<< HEAD
   port: 8081
+=======
+  port: 8081
+>>>>>>> 0ecd5a8 (Initial clean commit)

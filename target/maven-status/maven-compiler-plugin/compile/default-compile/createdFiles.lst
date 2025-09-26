@@ -1,10 +1,10 @@
 com\bhojrajCreation\journalApp\ApiResponse\WeatherResponse$Current.class
 com\bhojrajCreation\journalApp\Config\RedisConfig.class
-com\bhojrajCreation\journalApp\Services\GoogleAuthService.class
 com\bhojrajCreation\journalApp\Utils\JwtUtil.class
 com\bhojrajCreation\journalApp\Filter\JwtFiler.class
 com\bhojrajCreation\journalApp\JournalApplication.class
 com\bhojrajCreation\journalApp\DTO\SignupFormDTO.class
+com\bhojrajCreation\journalApp\Controller\PubilcController.class
 com\bhojrajCreation\journalApp\Services\EmailService.class
 com\bhojrajCreation\journalApp\Controller\GoogleAuthController.class
 com\bhojrajCreation\journalApp\Config\SwaggerConfig.class

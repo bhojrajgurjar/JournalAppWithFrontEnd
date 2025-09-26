@@ -1,3 +1,4 @@
+
 package com.bhojrajCreation.journalApp.Controller;
 
 import com.bhojrajCreation.journalApp.ApiResponse.QuoteResponse;
@@ -31,18 +32,12 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
-<<<<<<< HEAD
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-=======
-
-import java.util.Arrays;
-import java.util.List;
->>>>>>> 0ecd5a8 (Initial clean commit)
 
 @Controller
 @RequestMapping("/user")
@@ -87,7 +82,6 @@ public class UserController {
 
     @PostMapping("/signup")
     public String processSignup(@Valid @ModelAttribute("user") UserDto userDto,
-<<<<<<< HEAD
                                 BindingResult result,
                                 RedirectAttributes redirectAttributes) {
         if (result.hasErrors()) {
@@ -126,34 +120,6 @@ public class UserController {
             redirectAttributes.addFlashAttribute("error", "Signup failed. Try again.");
             return "redirect:/user/signup";
         }
-=======
-                                BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return "signup"; // Return signup page if validation fails
-        }
-
-        // Check if the username or email already exists
-        if (userService.findByUsername(userDto.getUsername()) != null) {
-            model.addAttribute("error", "Username already exists");
-            return "signup";
-        }
-
-        if (userService.findByEmail(userDto.getEmail()) != null) {
-            model.addAttribute("error", "Email already exists");
-            return "signup";
-        }
-
-        // Create a new user and save it
-        User newUser = new User();
-        newUser.setUsername(userDto.getUsername());
-        newUser.setEmail(userDto.getEmail());
-        newUser.setPassword(userDto.getPassword()); // Encrypt password
-        newUser.setRoles(Arrays.asList("USER")); // Assign default user role
-
-        userService.saveNewUser(newUser);
-
-        return "redirect:/user/login"; // Redirect to user home page after signup
->>>>>>> 0ecd5a8 (Initial clean commit)
     }
 
     @GetMapping("/login")
@@ -163,11 +129,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-<<<<<<< HEAD
     public String  loginUser(@ModelAttribute User user, RedirectAttributes redirectAttributes, HttpServletResponse response) {
-=======
-    public String  loginUser(@ModelAttribute User user, Model model, HttpServletResponse response) {
->>>>>>> 0ecd5a8 (Initial clean commit)
         try {
             // 1. Authenticate the user
             Authentication auth = authenticationManager.authenticate(
@@ -201,14 +163,9 @@ public class UserController {
             }
 
         } catch (AuthenticationException e) {
-<<<<<<< HEAD
             redirectAttributes.addFlashAttribute("error", "Invalid username or password");
             log.error("Login failed", e);
             return "redirect:/user/login";
-=======
-            model.addAttribute("error", "Invalid username or password");
-            log.error("Login failed", e);
->>>>>>> 0ecd5a8 (Initial clean commit)
         }
 
         return "login";
@@ -220,11 +177,7 @@ public class UserController {
 
 
     @GetMapping("/home")
-<<<<<<< HEAD
     public String showUserHome(Model model, HttpServletRequest request) {
-=======
-    public String showUserHome(Model model) {
->>>>>>> 0ecd5a8 (Initial clean commit)
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
         if (authentication == null || !authentication.isAuthenticated() || authentication.getPrincipal().equals("anonymousUser")) {
@@ -248,11 +201,7 @@ public class UserController {
             JournalEntry latestEntry = entries.get(entries.size() - 1);
             model.addAttribute("latestEntry", latestEntry);
         }
-<<<<<<< HEAD
         model.addAttribute("request", request);
-=======
-
->>>>>>> 0ecd5a8 (Initial clean commit)
         return "user-home";
     }
 
@@ -271,17 +220,12 @@ public class UserController {
     }
 
     @GetMapping("/view-journal")
-<<<<<<< HEAD
     public String viewAllEntries(Model model,HttpServletRequest request) {
-=======
-    public String viewAllEntries(Model model) {
->>>>>>> 0ecd5a8 (Initial clean commit)
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String username = auth.getName();
         User user = userService.findByUsername(username);
         List<JournalEntry> entries = user.getJournalEntries();
         model.addAttribute("entries", entries);
-<<<<<<< HEAD
         model.addAttribute("request", request);
         return "view-journal";
     }
@@ -336,28 +280,10 @@ public class UserController {
             return "redirect:/user/home?error=notfound";
         }
     }
-=======
-        return "view-journal";
-    }
-
-    @PostMapping("/journal/delete")
-    @Operation(summary = "Delete Journal entry of user by Id")
-    public String deleteJournalEntry(@RequestParam("id") String id){
-
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String username = auth.getName();
-        boolean removed = journalEntryService.deleteById(new ObjectId(id),username);
-        if (removed) {
-            return "redirect:/user/view-journal"; // or your view page path
-        } else {
-            return "redirect:/user/view-journal?error=notfound";
-        }
->>>>>>> 0ecd5a8 (Initial clean commit)
 
 
 
 
-<<<<<<< HEAD
 
     @GetMapping("/edit-journal/{id}")
     public String editJournal(@PathVariable ObjectId id, Model model) {
@@ -400,8 +326,6 @@ public class UserController {
 
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
-=======
->>>>>>> 0ecd5a8 (Initial clean commit)
     }
 
     //    @GetMapping
@@ -440,7 +364,7 @@ public class UserController {
         WeatherResponse weatherResponse = weatherService.getWeather(city);
         List<QuoteResponse> quoteResponse = quotesService.quoteForYou();
 
-       String greet="";
+        String greet="";
         if(weatherResponse!=null){
             greet=", Weather at "+city+" feels like " + weatherResponse.getCurrent().getFeelslike();
         }
@@ -533,4 +457,3 @@ public class UserController {
     }
 }
 * */
-

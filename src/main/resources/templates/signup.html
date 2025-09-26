@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -58,10 +59,7 @@
             margin-top: 1rem;
         }
     </style>
-<<<<<<< HEAD
 
-=======
->>>>>>> 0ecd5a8 (Initial clean commit)
 </head>
 <body>
 <div class="signup-container">
@@ -69,7 +67,6 @@
 
   <!-- Error message -->
   <div th:if="${param.error}" class="error">Signup failed. Try again.</div>
-<<<<<<< HEAD
   <div th:if="${success}" style="color: green; font-weight: bold; margin-bottom: 10px;">
     <p th:text="${success}"></p>
   </div>
@@ -77,8 +74,6 @@
   <div th:if="${error}" style="color: red; font-weight: bold; margin-bottom: 10px;">
     <p th:text="${error}"></p>
   </div>
-=======
->>>>>>> 0ecd5a8 (Initial clean commit)
 
   <form th:action="@{/user/signup}" method="post">
     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
@@ -93,12 +88,9 @@
     <div class="form-group">
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required>
-<<<<<<< HEAD
       <small >
         ~ Password at least 6 characters
       </small>
-=======
->>>>>>> 0ecd5a8 (Initial clean commit)
     </div>
     <button type="submit">Sign Up</button>
   </form>
@@ -107,7 +99,6 @@
     Already have an account? <a th:href="@{/user/login}">Login</a>
   </div>
 </div>
-<<<<<<< HEAD
 
 
 <script>
@@ -145,7 +136,5 @@
 });
 
 </script>
-=======
->>>>>>> 0ecd5a8 (Initial clean commit)
 </body>
 </html>

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //package com.bhojrajCreation.journalApp.Controller;
 //
 //import com.bhojrajCreation.journalApp.DTO.UserDto;
@@ -68,8 +68,6 @@
 //    }
 //
 //
-//}
-=======
 package com.bhojrajCreation.journalApp.Controller;
 
 import com.bhojrajCreation.journalApp.DTO.UserDto;
@@ -140,4 +138,4 @@ public class PubilcController {
 
 
 }
->>>>>>> 0ecd5a8 (Initial clean commit)
+

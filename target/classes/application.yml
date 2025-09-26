@@ -10,7 +10,12 @@ spring:
     resources:
       static-locations: classpath:/static/
   security:
-
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${googleClientId}
+            client-secret: ${googleClientSecret}
   redis:
     host: redis-19512.c239.us-east-1-2.ec2.redns.redis-cloud.com
     port: 19512

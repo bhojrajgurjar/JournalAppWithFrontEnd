@@ -90,9 +90,7 @@ public class JournalApplicationV2 {
 
         }
 
-<<<<<<< HEAD
 
-=======
         @PutMapping("/id/{myId}")
         @Operation(summary = "Update Journal entry of user by Id")
         public ResponseEntity<JournalEntry> updateJournalEntry(@PathVariable ObjectId myId, @RequestBody JournalEntry newEntry){
@@ -121,6 +119,6 @@ public class JournalApplicationV2 {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 
         }
->>>>>>> 0ecd5a8 (Initial clean commit)
+
 
 }

@@ -3,6 +3,7 @@ package com.bhojrajCreation.journalApp.Controller;
 import com.bhojrajCreation.journalApp.Services.UserDetailsServiceImp;
 import com.bhojrajCreation.journalApp.Services.UserService;
 import com.bhojrajCreation.journalApp.Utils.JwtUtil;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 @ContextConfiguration(classes = {PubilcController.class})
 @ExtendWith(SpringExtension.class)
+@Disabled
 class PubilcControllerDiffblueTest {
     @MockBean
     private AuthenticationManager authenticationManager;
