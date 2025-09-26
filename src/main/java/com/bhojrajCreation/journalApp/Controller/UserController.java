@@ -1,8 +1,6 @@
 
 package com.bhojrajCreation.journalApp.Controller;
 
-import com.bhojrajCreation.journalApp.ApiResponse.QuoteResponse;
-import com.bhojrajCreation.journalApp.ApiResponse.WeatherResponse;
 import com.bhojrajCreation.journalApp.DTO.UserDto;
 import com.bhojrajCreation.journalApp.Entity.JournalEntry;
 import com.bhojrajCreation.journalApp.Entity.User;
@@ -54,11 +52,7 @@ public class UserController {
 
     @Autowired
     private UserRepository userRepository;
-    @Autowired
-    private WeatherService weatherService;
 
-    @Autowired
-    private QuotesService quotesService;
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Autowired
@@ -356,21 +350,21 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping("/city/{city}")
-    @Operation(summary = "Get Greetings")
-    public ResponseEntity<?> greeting(@PathVariable String city){
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-
-        WeatherResponse weatherResponse = weatherService.getWeather(city);
-        List<QuoteResponse> quoteResponse = quotesService.quoteForYou();
-
-        String greet="";
-        if(weatherResponse!=null){
-            greet=", Weather at "+city+" feels like " + weatherResponse.getCurrent().getFeelslike();
-        }
-
-        return new ResponseEntity<>("Hi  "+auth.getName()+ greet +" and quote for you is ' "+quoteResponse.get(0).getQuote()+" '" , HttpStatus.OK);
-    }
+//    @GetMapping("/city/{city}")
+//    @Operation(summary = "Get Greetings")
+//    public ResponseEntity<?> greeting(@PathVariable String city){
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//
+//        WeatherResponse weatherResponse = weatherService.getWeather(city);
+//        List<QuoteResponse> quoteResponse = quotesService.quoteForYou();
+//
+//        String greet="";
+//        if(weatherResponse!=null){
+//            greet=", Weather at "+city+" feels like " + weatherResponse.getCurrent().getFeelslike();
+//        }
+//
+//        return new ResponseEntity<>("Hi  "+auth.getName()+ greet +" and quote for you is ' "+quoteResponse.get(0).getQuote()+" '" , HttpStatus.OK);
+//    }
 
 }
 

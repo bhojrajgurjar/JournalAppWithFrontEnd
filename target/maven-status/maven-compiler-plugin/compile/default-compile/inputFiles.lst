@@ -1,11 +1,6 @@
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\ApiResponse\QuoteResponse.java
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\ApiResponse\WeatherResponse.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Cache\AppCache.java
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Config\RedisConfig.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Config\SpringSecurity.java
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Config\SwaggerConfig.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Controller\AdminController.java
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Controller\GoogleAuthController.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Controller\JournalApplicationV2.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Controller\PubilcController.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Controller\UserController.java
@@ -22,12 +17,7 @@ C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajC
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Repository\JournalEntryRepository.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Repository\UserRepository.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Repository\UserRepositoryImp.java
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Scheduller\UserScheduller.java
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Services\EmailService.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Services\JournalEntryService.java
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Services\QuotesService.java
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Services\RedisService.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Services\UserDetailsServiceImp.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Services\UserService.java
-C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Services\WeatherService.java
 C:\Users\HP\Desktop\SpringBoot\journalAppWithFrontEnd\src\main\java\com\bhojrajCreation\journalApp\Utils\JwtUtil.java
