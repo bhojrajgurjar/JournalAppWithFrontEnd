@@ -1,10 +1,7 @@
 HELP.md
 <<<<<<< HEAD
 =======
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+
 >>>>>>> 0ecd5a8 (Initial clean commit)
 
 ### STS ###
